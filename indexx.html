@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weekly_challenge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+:root {
+    --color-primary-dark: #004838;
+    --color-primary-dark: #1a6c60;
+    --color-accent-light: #E2FB8C;
+    --color-darker: #073127;
+    --color-gray-dark: #333F3C;
+    --color-light-bg: #EBEDE8;
+    --font-main: 'Aspekta', sans-serif; 
+}
+
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    top: 0;
+    position: sticky;
+    background-color: var(--color-light-bg);
+    padding: 40px;
+}
+
+.nav{
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav li{
+    margin: 0;
+}
+.nav a{
+      color: var(--color-primary-dark);
+      font-size: 20px;
+      text-transform: capitalize;
+      padding: 10px 20px;
+      transition: all .42s ease;
+      display: block;
+      font-family: sans-serif;
+      text-decoration: none;
+
+
+    }
+    .nav a:hover{
+        color: var(--color-gray-dark);
+
+    }
+
+.login{
+    font-size: 20px;
+    color: rgb(18, 20, 20);
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.signup{
+    background-color:var(--color-primary-dark);
+    color: azure;
+    padding: 10px 20px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.hero{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 15%;
+    margin-top: 30px;
+    background-color: #f9fbfa;
+    
+
+}
+.hero-content p span{
+    font-size: 2rem;
+    line-height: 1.6;
+    font-weight: 600;
+  
+
+}
+.hero-content p {
+    font-size: 2rem;
+    line-height: 1.2;
+   
+    
+    
+}
+.hero-content .pra{
+    font-size: 1rem;
+    font-family: sans-serif;
+    line-height: 1.6;
+    padding: 8px;
+    color: #5c6b67;
+}
+.form input{
+    background-color: var(--color-light-bg);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+
+
+
+}
+.form .btn{
+    background-color: var(--color-primary-dark);
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+
+
+}
+.qoral{
+    font-size: 30px;
+    color: var(--color-darker);
+    font-weight: 900;
+    padding: 20px 0;
+}
+.card{
+    width: 320px;
+    padding: 20px;
+    height: 310px;
+    background-color: var(--color-light-bg);
+    border: 1px solid var(--color-light-bg);
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(45, 61, 88, 0.06);
+    font-family: sans-serif;
+    
+
+}
+.card img{
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+}
+.card h2{
+    font-size: 18px;
+    margin: 0 0 8px;
+
+}
+.card .invoice{
+    margin: 10px 0 0 12px;
+    color: #4a4848;
+    font-size: 18px;
+    border: none;
+}
+.card p{
+    border: 1px solid rgb(157, 155, 155);
+    border-radius: 10px;
+    padding: 10px 6px;
+}
+.crd{
+    border: 2px  solid var(--color-primary-dark);
+    border-radius: 10px;
+    padding: 10px 6px;
+
+}
+.credit{
+    border: none;
+    border-radius: 10px;
+    padding: 10px 6px;
+
+}
+.pay{
+    border: 1px solid rgb(157, 155, 155);
+    border-radius: 10px;
+    padding: 10px 6px;
+    background-color: var(--color-darker);
+    color: white;
+    text-align: center;
+
+}
+.logo{
+    display: flex;
+}
+.small_Card{
+    position: absolute;
+    width: 120px;
+    padding: 20px;
+    height: 40%;
+    color: aliceblue;
+    background-color: var(--color-primary-dark);
+    border: 1px solid var(--color-light-bg);
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(45, 61, 88, 0.06);
+    font-family: sans-serif;
+    bottom: unset;
+    right: -30px;
+    top: -20px;
+    
+   
+}
+.down{
+    background-color: #043b2f;
+    color: #f9fbfa;
+}
+.down i{
+    background-color: aliceblue;
+    color: #0c0c0c;
+    
+}
+.down span{
+    padding: 0 20px;
+}
+.card_content{
+    position: relative;
+}
+
+    </style>
+</head>
+<body>
+    <!-- <div class="header">
+        <div class="logo">
+            <img src="nova.jpg" alt="logo">
+        </div>
+        
+        <ul class="nav">
+         <li><a href="#">Products</a></li>
+         <li><a href="#">Customers</a></li>
+         <li><a href="#">Pricing</a></li>
+         <li><a href="#">Learn</a></li>
+      </ul>
+      <div class="btn">
+        <button class="login">login</button>
+        <button class="signup">sign up</button>
+      </div>
+        
+    </div> -->
+    <section class="hero">
+        <div class="hero-content">
+            <p><span>Get paid early</span><br> save automatically <br>all your pay</p>
+            <p class="pra">Supports small businesses with simple invoicing,<br> powerful integrations, and cash flow management tools.</p>
+            <div class="form">
+            <input type="email" placeholder="Your business email">
+            <button class="btn btn-signup">Get Started &rarr;</button>
+            <div class="qoral">
+            <span>Klarna.</span>
+            <span>Coinbase.</span>
+            <span>instacart.</span>    
+            
+
+        </div>
+        </div>
+
+        
+        <div class="card_content">
+        <div class="card">
+            <div class="logo">
+                <img src="nova.jpg" alt="logo">
+                <h2>Credit Card</h2>
+                
+            </div>
+                <p class="invoice">Invoice</p>
+                <h1 class="crd">$1,876,580</h1>
+                <p>April 21, 2024</p>
+
+                <p class="credit"><i class="fa-solid fa-credit-card"></i> <span>Credit Card</span></p>
+                <p class="bank"><i class="fa-solid fa-bank"></i> <span>Bank Account</span></p>
+                <p class="pay">Pay</p>
+            
+        </div>
+       <div class="small_Card">
+        <div class="topcard">
+            <h2>credit card</h2>
+            <p>234 **** ****</p>
+        </div>
+        <div class="down">
+            <span>VISA <i class="fa-solid fa-wifi pay"></i></span>
+            
+        </div>
+       </div>
+    </div>
+
+
+    
+
+    </div>
+</section>
+</body>
+</html>

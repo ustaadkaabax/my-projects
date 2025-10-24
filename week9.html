@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finpay Landing Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background-color: #cbd5e1;
+        color: #0f172a;
+        line-height: 1.6;
+      }
+
+      :root {
+        --color-primary-dark: #004838;
+        --color-primary-dark: #1a6c60;
+        --color-accent-light: #e2fb8c;
+        --color-darker: #073127;
+        --color-gray-dark: #333f3c;
+        --color-light-bg: #ebede8;
+      }
+      /* header */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 6%;
+      }
+      .logo img {
+        width: 100px;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 2.6rem;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: #0f172a;
+        font-weight: 500;
+      }
+
+      .auth-buttons {
+        display: flex;
+        gap: 1.2rem;
+      }
+
+      .btn {
+        padding: 0.6rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+      }
+
+      .btn-outline {
+        background: transparent;
+        border: 1px solid #353d5164;
+        color: #0f172a;
+      }
+
+      .btn-primary {
+        background: var(--color-primary-dark);
+        color: white;
+        padding: 1rem 1.3rem;
+        border: none;
+        border-radius: 8px;
+      }
+      /* hero section */
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 4rem 6%;
+        gap: 3rem;
+      }
+
+      .hero-text h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-text p {
+        margin-bottom: 1.5rem;
+        color: #334155;
+      }
+      .email-form {
+        display: flex;
+        margin-bottom: 2rem;
+      }
+
+      .email-form input {
+        padding: 1rem 1.5rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+      }
+
+      .partners {
+        display: flex;
+        gap: 3.5rem;
+        font-size: 1.5rem;
+        align-items: center;
+        font-weight: 600;
+      }
+      .card {
+        width: 320px;
+        padding: 20px;
+        align-items: center;
+        background-color: var(--color-light-bg);
+        border: 1px solid var(--color-light-bg);
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(45, 61, 88, 0.06);
+        font-family: sans-serif;
+        position: relative;
+      }
+      .card h2 {
+        font-size: 18px;
+        margin: 0 0 8px;
+      }
+      .card .invoice {
+        margin: 10px 0 0 12px;
+        color: #4a4848;
+        font-size: 18px;
+        border: none;
+      }
+      .card p {
+        border: 1px solid rgb(157, 155, 155);
+        border-radius: 10px;
+        padding: 10px 6px;
+      }
+      .crd {
+        border: 2px solid var(--color-primary-dark);
+        border-radius: 10px;
+        padding: 10px 6px;
+      }
+      .credit {
+        border: none;
+        border-radius: 10px;
+        padding: 10px 6px;
+      }
+      .pay {
+        border: 1px solid rgb(157, 155, 155);
+        border-radius: 10px;
+        padding: 10px 6px;
+        background-color: var(--color-darker);
+        color: white;
+        text-align: center;
+      }
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .logo h2 {
+        margin-top: 5px;
+      }
+      .small_Card {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        width: 180px;
+        color: aliceblue;
+        background-color: var(--color-primary-dark);
+        border: 1px solid var(--color-light-bg);
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(45, 61, 88, 0.6);
+        font-family: sans-serif;
+        right: 200px;
+        top: -40px;
+      }
+      .topcard {
+        padding: 10px 14px;
+      }
+      .topcard h2 {
+        font-size: 0.5rem;
+      }
+      .down {
+        background-color: #000000;
+        color: #f9fbfa;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      .down i {
+        background: none;
+        border: none;
+        rotate: 70deg;
+        color: #fcfcfc;
+      }
+      .card_content {
+        position: relative;
+      }
+
+      /* FEATURES SECTION */
+      .features {
+        background: white;
+        margin: 4rem 6%;
+        border-radius: 1rem;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .feature-content {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+      }
+      .feature-tittle {
+        width: 50%;
+      }
+      .feature-tittle h4 {
+        color: #1a6c60;
+      }
+      .feature-des {
+        width: 30%;
+      }
+      .feature-des p {
+        font-size: 0.6rem;
+        color: var(--color-primary-dark);
+      }
+      .feature-cards {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+      }
+      .feature {
+        width: 28%;
+      }
+      .feature i {
+        font-size: 2rem;
+        color: var(--color-primary-dark);
+      }
+      .feature h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #0f172a;
+      }
+
+      .feature p {
+        color: #475569;
+        font-size: 0.5rem;
+      }
+
+      /* WHY US SECTION */
+      .why-us {
+        padding: 4rem 6%;
+        width: 100%;
+        margin: auto;
+      }
+
+      .why-us h2 {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .cards {
+        display: grid;
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+
+      .card1 {
+        background: #ebede8;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      }
+      .card1 h3 {
+        font-size: 5rem;
+        color: var(--color-primary-dark);
+      }
+      .card1 p {
+        color: #000000;
+        font-size: 1.3rem;
+        font-weight: 700;
+      }
+      .card2 {
+        background: #ebede8;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      }
+      .card2 img {
+        width: 350px;
+      }
+      .card3 {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        background: #ebede8;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        margin: auto;
+      }
+      .card3 h3{
+        font-size: 1.6rem;
+        padding: 12px;
+        font-weight: 600;
+      }
+      .card3 .title{
+        width: 30%;
+      }
+      .card3 p{
+        font-size: 1rem;
+        padding: 12px;
+      }
+      .card3 img {
+        width: 450px;
+      }
+      .card3 .image{
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-links">
+        <div class="logo">
+          <img src="./images/logo.png" alt="" />
+        </div>
+        <a href="#">Products</a>
+        <a href="#">Customers</a>
+        <a href="#">Pricing</a>
+        <a href="#">Learn</a>
+      </nav>
+      <div class="auth-buttons">
+        <button class="btn btn-outline">Login</button>
+        <button class="btn btn-primary">Sign Up</button>
+      </div>
+    </header>
+    <!-- hero section -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Get paid early,<br />save automatically,<br />all your pay.</h1>
+        <p>
+          Supports small businesses with simple invoicing, powerful
+          integrations, and cash flow management tools.
+        </p>
+        <div class="email-form">
+          <input type="email" placeholder="Your business email" />
+          <button class="btn btn-primary">Get Started</button>
+        </div>
+        <div class="partners">
+          <span>Klarna</span>
+          <span>Coinbase</span>
+          <span>Instacart</span>
+        </div>
+      </div>
+      <div class="card_content">
+        <div class="card">
+          <div class="logo">
+            <img src="/images/logo.png" alt="logo" />
+            <h2>Credit Card</h2>
+          </div>
+          <p class="invoice">Invoice</p>
+          <h1 class="crd">$1,876,580</h1>
+          <p>April 21, 2024</p>
+
+          <p class="credit">
+            <i class="fa-solid fa-credit-card"></i> <span>Credit Card</span>
+          </p>
+          <p class="bank">
+            <i class="fa-solid fa-bank"></i> <span>Bank Account</span>
+          </p>
+          <p class="pay">Pay</p>
+        </div>
+
+        <div class="small_Card">
+          <div class="topcard">
+            <h2>credit card</h2>
+            <p>234 **** ****</p>
+          </div>
+          <span class="down">VISA <i class="fa-solid fa-wifi pay"></i></span>
+        </div>
+      </div>
+    </section>
+    <!-- features -->
+    <section class="features">
+      <div class="feature-content">
+        <div class="feature-tittle">
+          <h4>feature experience</h4>
+          <h1>experience that grows with your scale</h1>
+        </div>
+        <div class="feature-des">
+          <p>
+            voluptatem dignissimos. Tempora aut perspiciatis blanditiis
+            sapiente. Dolorem, molestias. Ea consectetur impedit vitae eaque
+            voluptatibus.
+          </p>
+        </div>
+      </div>
+      <div class="feature-cards">
+        <div class="feature">
+          <i class="fa-solid fa-money-bill-transfer fa-flip-vertical fa-xs"></i>
+          <h3>Free transfers</h3>
+          <p>
+            Create a financial experience by automating repeat purchases and
+            scheduling recurring payments.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fa-solid fa-building-columns"></i>
+          <h3>Multiple accounts</h3>
+          <p>
+            Run your operations with cash flow management and generate yield on
+            stored funds.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fa-solid fa-shield-halved"></i>
+          <h3>Unmatched security</h3>
+          <p>
+            Securely manage finances with organization-wide MFA and card-level
+            control.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- why-us -->
+    <section class="why-us">
+      <h2>Why they prefer Finpay</h2>
+      <div class="cards">
+        <div class="card1">
+          <h3>3k+</h3>
+          <p>Businesses already running on Finpay</p>
+        </div>
+        <div class="card2">
+          <h3>Instant Withdraw Withdraw your funds anytime</h3>
+          <img src="./images/card.png" alt="" />
+        </div>
+      </div>
+      <div class="card3">
+        <div class="title">
+          <h3>No asset volatility</h3>
+          <p>Generate returns without heavy investments</p>
+        </div>
+        <div class="image"><img src="./images/summury.png" alt="" /></div>
+      </div>
+    </section>
+  </body>
+</html>
